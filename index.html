@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="Expires" content="0">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-control" content="no-cache">
-<meta http-equiv="Cache" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
   <title>ATP是直接能源物质的验证</title>
   <link href="./reset.css" rel="stylesheet">
   <link href="./bootstrap.min.css" rel="stylesheet">
@@ -62,10 +62,11 @@
         <input type="text" class="form-control" aria-label="植物油" placeholder="植物油">
       </div>
     </div> -->
-    <div class="col-lg-2">
+    <div class="col-lg-3">
       <button type="button" class="btn btn-default" id="start">确定</button>
       <button type="button" class="btn btn-default" id="reset">重置</button>
-      <button type="button" class="btn btn-default" id="show">实验结果</button>
+      <button type="button" class="btn btn-default" id="show2">实验结果1</button>
+      <button type="button" class="btn btn-default" id="show1">实验结果2</button>
     </div>
 
   </div>
@@ -138,17 +139,19 @@
     <div class="col-lg-3 index0">
       <div class="shiguan">
         <i class="icon iconfont icon-huaxueshiguan" id="salt"></i>
+        <img src="./yellow.jpg" class="light">
       </div>
     </div>
     <div class="col-lg-3 index1">
       <div class="shiguan">
         <i class="icon iconfont icon-huaxueshiguan" id="sugar"></i>
+        <img src="./yellow.jpg" class="light">
       </div>
     </div>
     <div class="col-lg-3 index2">
       <div class="shiguan">
         <i class="icon iconfont icon-huaxueshiguan" id="atp"></i>
-        <img src="./yellow.jpg" id="light">
+        <img src="./yellow.jpg" class="light" id="light">
       </div>
     </div>
     <!-- <div class="col-lg-3 index3">
@@ -263,31 +266,32 @@
       // }
       window.location.reload();
     })
-    $('#show').click(function () {
+    $('#show1').click(function () {
       //停止水滴效果
-
       // clearInterval(loop);
-      $('#water1').css("visibility","hidden");
-      $('#water2').css("visibility","hidden");
-      $('#water3').css("visibility","hidden");
-      $('#water4').css("visibility","hidden");
-      $('#water5').css("visibility","hidden");
-      $('#water6').css("visibility","hidden");
-      // $('#water1').css("dispaly","none");
-      // $('#water2').css("dispaly","none");
-      // $('#water3').css("dispaly","none");
-      // $('#water4').css("dispaly","none");
-      // $('#water5').css("dispaly","none");
-      // $('#water6').css("dispaly","none");
-
-
-
-
+      $('#water1').css("visibility", "hidden");
+      $('#water2').css("visibility", "hidden");
+      $('#water3').css("visibility", "hidden");
+      $('#water4').css("visibility", "hidden");
+      $('#water5').css("visibility", "hidden");
+      $('#water6').css("visibility", "hidden");
       //发光效果
+      $('.light').css('opacity','0');
       $('#light').animate({
         opacity: "1"
-      }, 7000);
+      }, 3000);
 
+    })
+    $('#show2').click(function(){
+      //停止水滴效果
+      // clearInterval(loop);
+      $('#water1').css("visibility", "hidden");
+      $('#water2').css("visibility", "hidden");
+      $('#water3').css("visibility", "hidden");
+      $('#water4').css("visibility", "hidden");
+      $('#water5').css("visibility", "hidden");
+      $('#water6').css("visibility", "hidden");
+      $('.light').css('opacity','1');
     })
   </script>
 </body>
