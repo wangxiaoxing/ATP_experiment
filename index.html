@@ -243,11 +243,7 @@
     })
     //重置按钮绑定事件
     $('#reset').click(function () {
-      let inputs = $("[type='checkbox']");
-      for (let i = 0, len = inputs.length; i < len; i++) {
-        inputs[i].checked = false;
-        $('.col-lg-3').css('display', 'none');
-      }
+           window.location.reload();
     })
   </script>
 </body>
