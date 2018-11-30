@@ -47,4 +47,8 @@
   height: 100px;
   opacity: 0;
 }
+#top,#bottom{
+  display: flex;
+  justify-content: center;
+}
 
