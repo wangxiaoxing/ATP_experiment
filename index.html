@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ATP是直接能源物质的验证</title>
+  <link href="./reset.css" rel="stylesheet">
+  <link href="./bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./icon/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
+<body>
+  <h1 class="info">实验课题:ATP是直接能源物质的验证</h1>
+  <div class="info">
+    <h3>实验材料：</h3>
+    <h3>1.试管若干2.生理盐水3.葡萄糖溶液4.ATP溶液5.植物油</h3>
+  </div>
+  <div class="row info">
+    <div class="col-lg-2">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox" aria-label="生理盐水">
+        </span>
+        <input type="text" class="form-control" aria-label="生理盐水" placeholder="生理盐水">
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox" aria-label="葡萄糖溶液">
+        </span>
+        <input type="text" class="form-control" aria-label="葡萄糖溶液" placeholder="葡萄糖溶液">
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox" aria-label="ATP溶液">
+        </span>
+        <input type="text" class="form-control" aria-label="ATP溶液" placeholder="ATP溶液">
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="input-group">
+        <span class="input-group-addon">
+          <input type="checkbox" aria-label="植物油">
+        </span>
+        <input type="text" class="form-control" aria-label="植物油" placeholder="植物油">
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <button type="button" class="btn btn-default" id="start">确定</button>
+      <button type="button" class="btn btn-default" id="reset">重置</button>
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+
+
+
+  <div class="row" id="top">
+    <div class="col-lg-3 index0">
+      <div class="dropper">
+        <i class="icon iconfont icon-shiguan"></i>
+      </div>
+      <div class="water" id="water1">
+        <i class="icon iconfont icon-water-drop"></i>
+      </div>
+      <div class="water" id="water2">
+        <i class="icon iconfont icon-water-drop"></i>
+      </div>
+      <div class="water">
+        <span>生理盐水</span>
+      </div>
+
+    </div>
+    <div class="col-lg-3 index1">
+      <div class="dropper">
+        <i class="icon iconfont icon-shiguan"></i>
+      </div>
+      <div class="water" id="water3">
+        <i class="icon iconfont icon-water-drop"></i>
+      </div>
+      <div class="water" id="water4">
+        <i class="icon iconfont icon-water-drop"></i>
+      </div>
+      <div class="water">
+        <span>葡萄糖溶液</span>
+      </div>
+    </div>
+    <div class="col-lg-3 index2">
+      <div class="dropper">
+        <i class="icon iconfont icon-shiguan"></i>
+      </div>
+      <div class="water" id="water5">
+        <i class="icon iconfont icon-water-drop"></i>
+      </div>
+      <div class="water" id="water6">
+        <i class="icon iconfont icon-water-drop"></i>
+      </div>
+      <div class="water">
+        <span>ATP溶液</span>
+      </div>
+    </div>
+    <div class="col-lg-3 index3">
+      <div class="dropper">
+        <i class="icon iconfont icon-shiguan"></i>
+      </div>
+      <div class="water" id="water7">
+        <i class="icon iconfont icon-water-drop"></i>
+      </div>
+      <div class="water" id="water8">
+        <i class="icon iconfont icon-water-drop"></i>
+      </div>
+      <div class="water">
+        <span>植物油</span>
+      </div>
+
+    </div>
+  </div>
+  <div class="row" id="bottom">
+    <div class="col-lg-3 index0">
+      <div class="shiguan">
+        <i class="icon iconfont icon-huaxueshiguan" id="salt"></i>
+      </div>
+    </div>
+    <div class="col-lg-3 index1">
+      <div class="shiguan">
+        <i class="icon iconfont icon-huaxueshiguan" id="sugar"></i>
+      </div>
+    </div>
+    <div class="col-lg-3 index2">
+      <div class="shiguan">
+        <i class="icon iconfont icon-huaxueshiguan" id="atp"></i>
+        <img src="./yellow.jpg" id="light">
+      </div>
+    </div>
+    <div class="col-lg-3 index3">
+      <div class="shiguan">
+        <i class="icon iconfont icon-huaxueshiguan" id="oil"></i>
+      </div>
+    </div>
+  </div>
+
+  <script src="./jquery.min.js"></script>
+  <script src="./bootstrap.min.js"></script>
+  <script>
+    let loop = setInterval(litSlash, 1000);
+
+    function litSlash() {
+      $('#water1').animate({
+        opacity: "0"
+      }, 800);
+      $('#water1').animate({
+        opacity: "1"
+      }, 800);
+      $('#water2').animate({
+        opacity: "1"
+      }, 800);
+      $('#water2').animate({
+        opacity: "0"
+      }, 800);
+      $('#water3').animate({
+        opacity: "0"
+      }, 800);
+      $('#water3').animate({
+        opacity: "1"
+      }, 800);
+      $('#water4').animate({
+        opacity: "1"
+      }, 800);
+      $('#water4').animate({
+        opacity: "0"
+      }, 800);
+      $('#water5').animate({
+        opacity: "0"
+      }, 800);
+      $('#water5').animate({
+        opacity: "1"
+      }, 800);
+      $('#water6').animate({
+        opacity: "1"
+      }, 800);
+      $('#water6').animate({
+        opacity: "0"
+      }, 800);
+      $('#water7').animate({
+        opacity: "0"
+      }, 800);
+      $('#water7').animate({
+        opacity: "1"
+      }, 800);
+      $('#water8').animate({
+        opacity: "1"
+      }, 800);
+      $('#water8').animate({
+        opacity: "0"
+      }, 800);
+    }
+    //确定按钮绑定事件
+    $('#start').click(function () {
+      //  console.log($("[type='checkbox']"));
+      let showIndex = [];
+      let inputs = $("[type='checkbox']");
+      for (let i = 0, len = inputs.length; i < len; i++) {
+        if (inputs[i].checked) {
+          showIndex.push(i);
+        }
+      }
+      // console.log(showIndex);
+      for (let j = 0, len = showIndex.length; j < len; j++) {
+        if (showIndex[j] == 0) {
+          $('.index0').css('display', 'block');
+        }
+        if (showIndex[j] == 1) {
+          $('.index1').css('display', 'block');
+        }
+        if (showIndex[j] == 2) {
+          $('.index2').css('display', 'block');
+        }
+        if (showIndex[j] == 3) {
+          $('.index3').css('display', 'block');
+        }
+      }
+      //停止水滴效果
+      setTimeout(function () {
+        clearInterval(loop);
+        // $('.water').css("visibility","visible");
+        //发光效果
+        $('#light').animate({
+          opacity: "1"
+        }, 7000);
+      }, 100);
+      
+    })
+    //重置按钮绑定事件
+    $('#reset').click(function () {
+      let inputs = $("[type='checkbox']");
+      for (let i = 0, len = inputs.length; i < len; i++) {
+        inputs[i].checked = false;
+        $('.col-lg-3').css('display', 'none');
+      }
+    })
+  </script>
+</body>
+
+</html>

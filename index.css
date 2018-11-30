@@ -1,0 +1,50 @@
+#salt,#sugar,#atp,#oil{
+  font-size: 260px;
+  color:gray;
+}
+.icon-shiguan{
+  font-size:120px;
+  margin-left: 80px;
+}
+.dropper{
+  width:300px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shiguan{
+  width:300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.water{
+  width:300px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top:-10px; */
+}
+.icon-water-drop{
+  font-size:30px;
+}
+.info{
+  display: flex;
+  justify-content: center;
+}
+.index0,.index1,.index2,.index3{
+  display: none;
+}
+#light{
+  position:absolute;
+  left:130px;
+  top:90px;
+  z-index:-1;
+  width:70px;
+  height: 100px;
+  opacity: 0;
+}
+
