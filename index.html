@@ -204,6 +204,10 @@
     //确定按钮绑定事件
     $('#start').click(function () {
       //  console.log($("[type='checkbox']"));
+       $('.index0').css('display', 'none');
+      $('.index1').css('display', 'none');
+      $('.index2').css('display', 'none');
+      $('.index3').css('display', 'none');
       let showIndex = [];
       let inputs = $("[type='checkbox']");
       for (let i = 0, len = inputs.length; i < len; i++) {
