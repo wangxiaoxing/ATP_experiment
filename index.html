@@ -16,7 +16,7 @@
   <h1 class="info">实验课题:ATP是直接能源物质的验证</h1>
   <div class="info">
     <h3>实验材料：</h3>
-    <h3>1.试管若干2.生理盐水3.葡萄糖溶液4.ATP溶液5.植物油</h3>
+    <h3>1.试管若干2.萤火虫尾部粉末2.生理盐水3.葡萄糖溶液4.ATP溶液</h3>
   </div>
   <div class="row info">
     <div class="col-lg-2">
@@ -43,17 +43,18 @@
         <input type="text" class="form-control" aria-label="ATP溶液" placeholder="ATP溶液">
       </div>
     </div>
-    <div class="col-lg-2">
+    <!-- <div class="col-lg-2">
       <div class="input-group">
         <span class="input-group-addon">
           <input type="checkbox" aria-label="植物油">
         </span>
         <input type="text" class="form-control" aria-label="植物油" placeholder="植物油">
       </div>
-    </div>
+    </div> -->
     <div class="col-lg-2">
       <button type="button" class="btn btn-default" id="start">确定</button>
       <button type="button" class="btn btn-default" id="reset">重置</button>
+      <button type="button" class="btn btn-default" id="show">实验结果</button>
     </div>
 
   </div>
@@ -106,7 +107,7 @@
         <span>ATP溶液</span>
       </div>
     </div>
-    <div class="col-lg-3 index3">
+    <!-- <div class="col-lg-3 index3">
       <div class="dropper">
         <i class="icon iconfont icon-shiguan"></i>
       </div>
@@ -120,7 +121,7 @@
         <span>植物油</span>
       </div>
 
-    </div>
+    </div> -->
   </div>
   <div class="row" id="bottom">
     <div class="col-lg-3 index0">
@@ -139,11 +140,11 @@
         <img src="./yellow.jpg" id="light">
       </div>
     </div>
-    <div class="col-lg-3 index3">
+    <!-- <div class="col-lg-3 index3">
       <div class="shiguan">
         <i class="icon iconfont icon-huaxueshiguan" id="oil"></i>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <script src="./jquery.min.js"></script>
@@ -188,26 +189,27 @@
       $('#water6').animate({
         opacity: "0"
       }, 800);
-      $('#water7').animate({
-        opacity: "0"
-      }, 800);
-      $('#water7').animate({
-        opacity: "1"
-      }, 800);
-      $('#water8').animate({
-        opacity: "1"
-      }, 800);
-      $('#water8').animate({
-        opacity: "0"
-      }, 800);
+      // $('#water7').animate({
+      //   opacity: "0"
+      // }, 800);
+      // $('#water7').animate({
+      //   opacity: "1"
+      // }, 800);
+      // $('#water8').animate({
+      //   opacity: "1"
+      // }, 800);
+      // $('#water8').animate({
+      //   opacity: "0"
+      // }, 800);
     }
     //确定按钮绑定事件
     $('#start').click(function () {
       //  console.log($("[type='checkbox']"));
-       $('.index0').css('display', 'none');
+      $('.index0').css('display', 'none');
       $('.index1').css('display', 'none');
       $('.index2').css('display', 'none');
       $('.index3').css('display', 'none');
+
       let showIndex = [];
       let inputs = $("[type='checkbox']");
       for (let i = 0, len = inputs.length; i < len; i++) {
@@ -226,24 +228,55 @@
         if (showIndex[j] == 2) {
           $('.index2').css('display', 'block');
         }
-        if (showIndex[j] == 3) {
-          $('.index3').css('display', 'block');
-        }
+        // if (showIndex[j] == 3) {
+        //   $('.index3').css('display', 'block');
+        // }
       }
-      //停止水滴效果
-      setTimeout(function () {
-        clearInterval(loop);
-        // $('.water').css("visibility","visible");
-        //发光效果
-        $('#light').animate({
-          opacity: "1"
-        }, 7000);
-      }, 100);
-      
+      // //停止水滴效果
+      // setTimeout(function () {
+      //   clearInterval(loop);
+      //   // $('.water').css("visibility","visible");
+      //   //发光效果
+      //   $('#light').animate({
+      //     opacity: "1"
+      //   }, 7000);
+      // }, 100);
+
     })
     //重置按钮绑定事件
     $('#reset').click(function () {
-           window.location.reload();
+      // let inputs = $("[type='checkbox']");
+      // for (let i = 0, len = inputs.length; i < len; i++) {
+      //   inputs[i].checked = false;
+      //   $('.col-lg-3').css('display', 'none');
+      // }
+      window.location.reload();
+    })
+    $('#show').click(function () {
+      //停止水滴效果
+
+      // clearInterval(loop);
+      $('#water1').css("visibility","hidden");
+      $('#water2').css("visibility","hidden");
+      $('#water3').css("visibility","hidden");
+      $('#water4').css("visibility","hidden");
+      $('#water5').css("visibility","hidden");
+      $('#water6').css("visibility","hidden");
+      // $('#water1').css("dispaly","none");
+      // $('#water2').css("dispaly","none");
+      // $('#water3').css("dispaly","none");
+      // $('#water4').css("dispaly","none");
+      // $('#water5').css("dispaly","none");
+      // $('#water6').css("dispaly","none");
+
+
+
+
+      //发光效果
+      $('#light').animate({
+        opacity: "1"
+      }, 7000);
+
     })
   </script>
 </body>
